@@ -84,7 +84,7 @@ Enable verbose output.
 
 #### options.clean
 Type: `Boolean`
-Default value: `false`
+Default value: `true`
 
 Remove orphaned files from build. **Build only**
 

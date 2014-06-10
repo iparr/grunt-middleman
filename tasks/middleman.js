@@ -43,7 +43,7 @@ module.exports = function(grunt) {
       port: 4567,
       glob: false,
       verbose: false,
-      clean: false,
+      clean: true,
       env: {}
     });
 
@@ -73,9 +73,9 @@ module.exports = function(grunt) {
       args.push("--glob=" + options.glob);
     }
 
-    // add the clean option (server only)
-    if(!options.server && options.clean){
-      args.push("--clean");
+    // add the clean option (build only)
+    if(!options.server && !options.clean){
+        args.push("--no-clean");
     }
 
     // add the server options
